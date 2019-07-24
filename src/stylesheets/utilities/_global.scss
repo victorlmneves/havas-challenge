@@ -1,0 +1,14 @@
+section {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+section:after,
+section:before {
+  content: " ";
+  display: table;
+}
+
+section:after {
+  clear: both;
+}

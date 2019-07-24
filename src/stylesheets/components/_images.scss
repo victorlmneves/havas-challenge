@@ -1,0 +1,7 @@
+.images {
+  @include image();
+
+  &--didatic {
+    position: relative;
+  }
+}

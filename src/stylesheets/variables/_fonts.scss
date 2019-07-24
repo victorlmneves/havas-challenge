@@ -1,0 +1,14 @@
+/** Font family **/
+$font-glypha: 'GlyphaLTStd';
+$font-family-sans-serif: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+$font-path: '../fonts';
+$font-glypha-path: "#{$font-path}/Glypha";
+$default-font-family: $font-glypha, $font-family-sans-serif;
+
+/** Font size **/
+$default-font-size: 18px;
+$default-line-height: 1.4;
+
+/** Font weight **/
+$font-weight-normal: 400;
+$font-weight-bold: 700;
