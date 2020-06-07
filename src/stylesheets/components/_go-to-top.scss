@@ -1,0 +1,10 @@
+.go2top {
+  bottom: 30px;
+  position: fixed;
+  right: 0;
+  z-index: 1;
+
+  @include respond-to(laptop) {
+    bottom: 60px;
+  }
+}

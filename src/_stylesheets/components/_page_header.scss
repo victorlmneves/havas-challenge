@@ -1,0 +1,80 @@
+$page-header-padding-vertical: 60px;
+$page-header-padding-side: 20%;
+
+$page-image-spacer-overlay-margin: 140px;
+
+.page-header {
+  @include container-padding;
+
+  background-color: $light-navy;
+  color: $white;
+  padding-bottom: $page-header-padding-vertical;
+  padding-top: $navigation-bar-height + $page-header-padding-vertical;
+  position: relative;
+
+  &__title {
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: $font-weight-light;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    @include respond-to(medium) {
+      text-shadow: none;
+      font-size: 2.9rem;
+    }
+  }
+
+  &__bar{
+    border: solid 2px $white;
+  }
+
+  &__image-container {
+    @include img-overlay($overlay-navy);
+
+    bottom: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &__link-items {
+    @include container-padding(0, 0, 30%, 30%, 'right');
+    position: relative;
+    border-bottom: solid 2px $white;
+
+    @include respond-up-to(medium) {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+
+  &__link-item {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    margin-bottom: 20px;
+
+    @include respond-to(medium) {
+      width: 33%;
+    }
+  }
+
+  &__link {
+    font-size: 0.7rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    @include respond-to(medium) {
+      font-size: 1.06rem;
+      text-shadow: none;
+    }
+  }
+
+  &--link-current {
+    font-weight: $font-weight-bold;
+  }
+}

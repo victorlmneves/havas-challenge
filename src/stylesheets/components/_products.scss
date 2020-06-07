@@ -1,0 +1,209 @@
+.products {
+
+  &__inner {
+    margin: 0 auto;
+    max-width: 1326px;
+    padding: 0 30px;
+    position: relative;
+
+    @include clearfix();
+
+    @include respond-to(tablet) {
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+  }
+
+  &__title {
+    font-family: $font-glypha;
+    font-weight: $font-weight-bold;
+    font-size: 1.6rem;
+    margin-top: 60px;
+    text-align: center;
+
+    @include respond-to(mobile) {
+      font-size: 3.2rem
+    }
+  }
+
+  &__carousel {
+    position: relative;
+
+    @include respond-to(mobile) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__prev,
+  &__next {
+    color: $green;
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+  }
+
+  &__next {
+    text-align: right;
+    right: 0;
+    transform: translate(0%, -40%);
+
+    @include respond-up-to(phone) {
+      right: -20px;
+    }
+
+    &:after {
+      content: ' \02794';
+    }
+  }
+
+  &__prev {
+    left: 0;
+    top: 38%;
+    transform: rotate(180deg);
+
+    @include respond-up-to(phone) {
+      left: -20px;
+    }
+
+    &:after {
+      content: ' \02794';
+    }
+  }
+
+  &__slide {
+    font-family: $font-family-sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 300px;
+
+    @include respond-up-to(mobile) {
+      margin: 0 auto;
+    }
+
+    @include respond-to(tablet) {
+      flex-shrink: 3;
+    }
+
+    @include respond-to(tablet) {
+      width: 33%;
+    }
+  }
+
+  &__img {
+    height: auto;
+    width: 100%;
+
+    &-container {
+      position: relative;
+    }
+  }
+
+  &__info-box {
+    color: $white;
+    display: table;
+    margin-top: -5px;
+    vertical-align: top;
+    width: 100%;
+
+    @include respond-up-to(laptop) {
+      min-height: 55px;
+    }
+  }
+
+  &__name {
+    background: $products-info-box-bg-color;
+    display: table-cell;
+    font-size: 0.7rem;
+    font-weight: $font-weight-bold;
+    padding: 10px 15px;
+  }
+
+  &__brand {
+    font-weight: $font-weight-normal;
+  }
+
+  &__ref {
+    display: block;
+    font-size: .5rem;
+    font-weight: $font-weight-normal;
+    margin-top: 2px;
+
+    &:before {
+      color: $white;
+      content: "Ref: ";
+    }
+  }
+
+  &__price {
+    background: $yellow;
+    color: $red;
+    font-size: 1.6rem;
+    font-weight: $font-weight-bold;
+    display: table-cell;
+    padding: 10px 15px;
+    text-align: center;
+    vertical-align: top;
+
+    @include respond-to(mobile) {
+      width: 100px;
+    }
+
+    &:first-letter {
+      font-size: .8rem;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &__cents {
+    font-size: .6rem;
+    font-weight: $font-weight-bold;
+    vertical-align: top;
+  }
+
+  &__new-price {
+    background: $red;
+    display: table-cell;
+    padding: 8px 0;
+
+    &:first-letter {
+      font-size: .6rem;
+      font-weight: $font-weight-bold;
+    }
+
+    & .products__cents {
+      font-size: 50%;
+      vertical-align: super;
+    }
+  }
+
+  &__discount {
+    bottom: 4px;
+    color: $white;
+    display: table;
+    font-size: 1rem;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 100px;
+  }
+
+  &__percentage {
+    background: $products-percentaget-bg-color;
+    display: table-cell;
+  }
+
+  &__link {
+    display: block;
+    margin-top: 10px;
+
+    @include links();
+
+    @include respond-up-to(mobile) {
+      font-weight: $font-weight-bold;
+      margin: 20px auto;
+      text-align: center;
+    }
+  }
+}

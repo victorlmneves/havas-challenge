@@ -1,0 +1,38 @@
+// taken from bootstrap 4
+@mixin img-fluid($display: block) {
+  display: $display;
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
+
+@mixin img-overlay($overlay-color: $overlay-shadow) {
+  &:after {
+    background-color: $overlay-color;
+    @include img-overlay-pos;
+  }
+}
+
+@mixin img-overlay-with-gradient(
+  $direction: left,
+  $overlay-color-start: $overlay-shadow,
+  $overlay-color-end: transparent) {
+
+    &:after {
+      @include img-overlay-pos;
+      @include linear-gradient($direction, $overlay-color-start, $overlay-color-end);
+
+      background-color: transparent;
+      z-index: $z-index-bg-image;
+    }
+}
+
+@mixin img-overlay-pos {
+  bottom: 0;
+  content: " ";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}

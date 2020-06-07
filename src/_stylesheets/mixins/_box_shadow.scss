@@ -1,0 +1,3 @@
+@mixin boxShadow($hpos, $vpos, $blur, $spread, $color) {
+	box-shadow: $hpos $vpos $blur $spread $color;
+}

@@ -1,0 +1,25 @@
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+}
+
+.row {
+
+  &--compact {
+    margin-left: 0;
+    margin-right: 0;
+    > [class^="col"] {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &--services {
+
+    @include respond-to(laptop) {
+      margin-left: -40px;
+      margin-right: -40px;
+    }
+  }
+}

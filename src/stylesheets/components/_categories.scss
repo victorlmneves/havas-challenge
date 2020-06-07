@@ -1,0 +1,83 @@
+.categories {
+  background: $services-section-bg-color;
+
+  @include respond-to(laptop) {
+    margin: 65px auto 0;
+  }
+
+  &__inner {
+    padding: 30px 5px 0;
+    margin: 0 auto;
+    max-width: 1326px;
+    position: relative;
+
+    @include clearfix();
+
+    @include respond-to(laptop) {
+      padding: 100px 55px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 10px;
+
+    @include unordered-list();
+
+    @include respond-to(mobile) {
+      justify-content: space-around;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    min-height: 195px;
+    padding: 0 10px;;
+    position: relative;
+    vertical-align: top;
+    width: 145px;
+  }
+
+  &__img-item {
+    width: 100%;
+  }
+
+  &__title {
+    font-family: $font-glypha;
+    font-weight: $font-weight-bold;
+    font-size: 1.5rem;
+    line-height: 1;
+    position: absolute;
+    top: 15%;
+    transform: translate(0, 15%);
+  }
+
+  &__link {
+    font-family: $font-family-sans-serif;
+    font-size: .75rem;
+
+    @include links();
+
+    @include respond-up-to(mobile) {
+      display: inline-block;
+      margin: .5vw 0 3vw;
+    }
+
+    @include respond-to(mobile) {
+      display: inline-block;
+      margin-bottom: 25px;
+    }
+
+    &:after {
+      content: ' \02794';
+    }
+
+    &:hover {
+      color: $green;
+      text-decoration: none;
+    }
+  }
+
+}

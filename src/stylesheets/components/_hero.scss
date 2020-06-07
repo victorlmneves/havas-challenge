@@ -1,0 +1,108 @@
+.hero {
+  background: $green url('../img/hero_image_mobile.jpg') no-repeat 60% -18vw;
+  background-size: 150vw;
+  height: 150vw;
+  margin: 0 auto;
+  width: 100%;
+
+  @include respond-to(tablet) {
+    background: $green url('../img/hero_image.jpg') no-repeat center top;
+    background-size: cover;
+    height: 70vw;
+    max-width: 1326px;
+  }
+
+  @include respond-to(laptop) {
+    height: 680px;
+  }
+
+  &__inner {
+    height: 150vw;
+    position: relative;
+
+    @include respond-to(tablet) {
+      height: 80vw;
+    }
+
+    @include respond-to(laptop) {
+      height: 680px;
+    }
+
+    @include clearfix();
+  }
+
+  &__content {
+    position: absolute;
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+  }
+
+  &__title,
+  &__subtitle,
+  &__excerpt {
+    color: $white;
+    font-family: $font-glypha;
+    left: 20px;
+    margin: 0;
+    position: absolute;
+
+    @include respond-to(tablet) {
+      left: 85px;
+    }
+  }
+
+  &__title {
+    bottom: 40vw;
+    font-size: 15vw;
+    font-weight: $font-weight-bold;
+    line-height: .95;
+
+    @include respond-to(tablet) {
+      bottom: 20vw;
+      font-size: 5.4rem;
+      left: 85px;
+    }
+
+    @include respond-to(laptop) {
+      bottom: 85px;
+    }
+  }
+
+  &__subtitle {
+    bottom: 72vw;
+    font-size: 4.4vw;
+    font-weight: $font-weight-normal;
+
+    @include respond-to(tablet) {
+      bottom: 38vw;
+      font-size: calc(1rem + 1.5vw);
+      left: 85px;
+    }
+
+    @include respond-to(laptop) {
+      bottom: 320px;
+    }
+  }
+
+  &__excerpt {
+    bottom: 11vw;
+    font-family: $font-family-sans-serif;
+    font-size: 4.3vw;
+    max-width: 85vw;
+
+    @include respond-to(tablet) {
+      bottom: 20vw;
+      font-size: 1.2rem;
+      left: 650px;
+      padding-right: 7vw;
+    }
+
+    @include respond-to(laptop) {
+      bottom: 85px;
+      font-size: 1rem;
+    }
+  }
+}

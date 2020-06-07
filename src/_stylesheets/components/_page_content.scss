@@ -1,0 +1,230 @@
+.page-content {
+  position: relative;
+
+  &__section {
+    position: relative;
+  }
+
+  &__side-links {
+    z-index: $z-index-side-anchors;
+    position: fixed;
+    top: 50px + 75px;
+    right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+
+    @include respond-up-to(medium) {
+      margin-right: 10px;
+    }
+
+    @include respond-to(medium) {
+      margin-right: $content-container-spacing-side-medium;
+    }
+
+    @include respond-to(large) {
+      margin-right: $content-container-spacing-side-large;
+    }
+
+    &.still-initial {
+      position: absolute;
+      bottom: auto;
+      top: 50px;
+    }
+
+    &.still-final {
+      position: absolute;
+      bottom: 150px;
+      top: auto;
+    }
+  }
+
+  &__side-link {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 25px;
+    border: solid 1px $black;
+    margin-bottom: 33px;
+    cursor: pointer;
+
+    @include respond-up-to(medium) {
+      width: 12px;
+      height: 12px;
+    }
+
+    &:hover,
+    &.is-active {
+      background-color: $black;
+    }
+  }
+
+  &__menu {
+    z-index: $z-index-side-anchors;
+
+    @include respond-up-to(medium) {
+      background-color: $cerulean;
+      bottom: 0;
+      color: $white;
+      position: fixed;
+      width: 100%;
+    }
+
+    @include respond-to(medium) {
+      -webkit-transform: translate3d(0, 0, 0);
+      background-color: $cerulean;
+      color: $white;
+      margin-bottom: 0;
+      margin-left: $menu-margin-left;
+      margin-right: $content-container-spacing-side-medium;
+      margin-top: 0;
+      position: fixed;
+      right: 0;
+      top: $side-menu-top + 75px;
+      width: $menu-module-width - (2 * (($content-container-spacing-side-medium / 100%) * $menu-module-width)) - $menu-margin-left;
+    }
+
+    @include respond-to(large) {
+      margin-right: $content-container-spacing-side-large;
+      margin-left: $menu-margin-left;
+      width: $menu-module-width - (2 * (($content-container-spacing-side-large / 100%) * $menu-module-width)) - $menu-margin-left;
+    }
+
+     &.still-initial {
+      @include respond-to(medium) {
+        position: absolute;
+        bottom: auto;
+        top: $side-menu-top;
+      }
+    }
+
+    &.still-final {
+      position: absolute;
+      bottom: 0;
+      top: auto;
+
+      @include respond-to(medium) {
+        position: absolute;
+        bottom: 0px;
+        top: auto;
+      }
+    }
+
+  }
+
+  &__menu-options {
+    margin: 0;
+    @include container-margin;
+    padding: 0;
+    list-style-position: inside;
+
+    @include respond-to(medium) {
+      @include unstyled-list;
+      padding: 10px 0;
+      margin: 0;
+    }
+  }
+
+  &__menu-option {
+    font-size: 1.15rem;
+    padding: 17px 25px;
+
+    @include respond-up-to(medium) {
+      font-size: 0.82rem;
+      display: none;
+
+      &.is-expanded {
+        display: list-item;
+        padding: 10px 0;
+      }
+    }
+
+    &--no-number {
+      @include respond-up-to(medium) {
+        @include unstyled-list;
+      }
+    }
+  }
+
+  &__menu-link {
+    font-weight: $font-weight-light;
+
+    &:hover,
+    &.is-active {
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &__menu-open {
+    @include container-margin;
+    font-size: 0.82rem;
+    padding: 10px 0;
+  }
+
+  &__menu-close {
+    border-bottom: solid 1px;
+  }
+
+  &__menu-close-inner {
+    @include container-margin;
+    font-size: 1.15rem;
+    padding: 10px 0;
+    font-weight: $font-weight-light;
+  }
+
+  &__menu-close, &__menu-open {
+    @include respond-to(medium) {
+      display: none;
+    }
+
+    &.is-hidden {
+      @include respond-up-to(medium) {
+        display: none;
+      }
+    }
+  }
+
+  &__menu-icon {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  &__menu-text {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+  }
+
+  &__menu-close-link, &__menu-open-link {
+    display: table;
+    width: 100%;
+  }
+
+  &__back-to-top {
+    margin-right: $content-container-spacing-side-medium;
+    right: 0;
+    position: absolute;
+    bottom: 100px;
+    border-bottom: solid 1px $black;
+    padding: 3px 5px;
+    font-weight: $font-weight-medium;
+    z-index: $z-index-side-anchors;
+
+    @include respond-to(large) {
+      margin-right: $content-container-spacing-side-large;
+    }
+
+    @include respond-up-to(medium) {
+      display: none;
+    }
+  }
+
+  &__visit-us-form {
+    @include container-padding;
+    margin-bottom: 40px;
+  }
+
+  &__related-stories {
+    @include container-padding;
+  }
+}

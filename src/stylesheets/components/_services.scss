@@ -1,0 +1,96 @@
+.services {
+  background: $services-section-bg-color;
+
+  @include respond-to(laptop) {
+    padding-bottom: 100px;
+  }
+
+  &__inner {
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+
+    @include clearfix();
+
+    @include respond-to(laptop) {
+      max-width: 1326px;
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+  }
+
+  &__title {
+    font-family: $font-glypha;
+    font-size: 1.6rem;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  &__wrap-topic {
+
+    @include respond-to(mobile) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__topic {
+    background: $white;
+    color: $green;
+    font-family: $font-glypha;
+    font-weight: $font-weight-bold;
+    margin-bottom: 15px;
+    min-height: 200px;
+    padding: 5% 10%;
+    text-align: center;
+
+    @include respond-to(mobile) {
+      display: inline-block;
+      margin: 0 3% 15px 3%;
+      max-width: 43%;
+    }
+  }
+
+  &__img {
+    display: block;
+    margin: 0 auto 10px;
+  }
+
+  &__list {
+    @include unordered-list();
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px -15px 0;
+
+    @include respond-to(mobile) {
+      justify-content: space-between;
+      margin: 50px 3% 15px 3%;
+    }
+  }
+
+  &__description {
+    display: block;
+    font-weight: $font-weight-normal;
+  }
+
+  &__item {
+    display: inline-block;
+    min-height: 195px;
+    padding: 0 10px;
+    position: relative;
+    vertical-align: top;
+    width: 145px;
+
+    @include respond-to(laptop) {
+      width: 160px;
+    }
+  }
+
+  &__img-item {
+    width: 100%;
+  }
+}

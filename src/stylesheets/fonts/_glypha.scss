@@ -1,0 +1,19 @@
+@font-face {
+    font-family: $font-glypha;
+    src: url("#{$font-glypha-path}/GlyphaLTStd.woff2") format("woff2"),
+         url("#{$font-glypha-path}/GlyphaLTStd.woff") format("woff"),
+         url("#{$font-glypha-path}/GlyphaLTStd.ttf") format("truetype"),
+         url("#{$font-glypha-path}/GlyphaLTStd.svg#GlyphaLTStd") format('svg');
+    font-weight: $font-weight-normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $font-glypha;
+    src: url("#{$font-glypha-path}/GlyphaLTStd-Bold.woff2") format("woff2"),
+         url("#{$font-glypha-path}/GlyphaLTStd-Bold.woff") format("woff"),
+         url("#{$font-glypha-path}/GlyphaLTStd-Bold.ttf") format("truetype"),
+         url("#{$font-glypha-path}/GlyphaLTStd-Bold.svg#GlyphaLTStd-Bold") format('svg');
+    font-weight: $font-weight-bold;
+    font-style: normal;
+}

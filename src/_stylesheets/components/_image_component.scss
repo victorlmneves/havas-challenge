@@ -1,0 +1,7 @@
+.image-component {
+  @include img-fluid;
+
+  &--fullwidth {
+    width: 100%;
+  }
+}

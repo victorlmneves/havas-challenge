@@ -1,0 +1,20 @@
+.links {
+  border: 0;
+  color: $green;
+  font-weight: $font-weight-normal;
+  padding: 5px 0;
+  outline: 0;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:after {
+    content: ' \02794';
+  }
+
+  &:hover {
+    color: $green;
+    text-decoration: none;
+  }
+}

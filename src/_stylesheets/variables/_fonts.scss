@@ -1,0 +1,50 @@
+/** Font family **/
+$font-roboto: 'Roboto';
+
+$font-path: '../fonts';
+$font-roboto-path: "#{$font-path}/Roboto";
+$icomoon-font-path: "#{$font-path}/valvoline-icons";
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$default-font-family: $font-roboto, $font-family-sans-serif;
+
+$default-font-color: #000;
+
+
+/** Font size **/
+$default-font-size: 16px;
+$default-font-size-small: 16px;
+$default-font-size-medium: 16px;
+$default-font-size-large: 16px;
+$default-line-height: 1.2;
+$footer-font-size: 0.7rem;
+
+
+/** Font weight **/
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+
+/** Icons **/
+$icon-chevron-down: "\e909";
+$icon-chevron-up: "\e90a";
+$icon-chevron-right: "\e907";
+$icon-chevron-left: "\e908";
+$icon-energy-policy: "\e904";
+$icon-sustainability: "\e905";
+$icon-technology: "\e906";
+$icon-search: "\e903";
+$icon-email: "\e901";
+$icon-twitter: "\e902";
+$icon-bars: "\f0c9";
+$icon-google-plus: "\f0d5";
+$icon-linkedin: "\f0e1";
+$icon-youtube: "\f16a";
+$icon-instagram: "\f16d";
+$icon-vimeo: "\f27d";
+$icon-facebook: "\e900";
+$icon-feed: "\f09e";
+$icon-like: "\f004";
+$icon-retweet: "\f079";

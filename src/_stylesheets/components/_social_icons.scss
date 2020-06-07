@@ -1,0 +1,108 @@
+$social-icons-spacer: 15px;
+$social-icons-spacer-large: 30px;
+
+.social-icons {
+  @include unstyled-list;
+
+  &__link {
+    // becaus addthis for some reason adds a margin-bottom
+    margin: 0 !important;
+  }
+
+  &--navigation-bar {
+    display: inline-block;
+    padding-right: $navigation-bar-form-toggle-button-padding;
+
+    .social-icons {
+      &__item {
+        display: inline-block;
+        color: $navigation-bar-links-color;
+        font-size: 0.8rem;
+
+
+        @each $social-network, $color in $social-colors {
+          &--#{$social-network} {
+            &:hover {
+              color: $color;
+            }
+          }
+        }
+
+        &:not(:last-child) {
+          margin-right: $social-icons-spacer;
+
+          @include respond-to(large) {
+            margin-right: $social-icons-spacer-large;
+          }
+        }
+      }
+    }
+  }
+
+  &--post {
+    @include respond-up-to(medium) {
+      display: table;
+      width: 100%;
+    }
+
+    @include respond-to(medium) {
+      display: inline-block;
+      padding-bottom: $s-cms-content-paragraph-spacer + $s-cms-content-half-line-height;
+    }
+
+    .social-icons {
+      &__item {
+        color: $white;
+        text-align: center;
+
+        @each $social-network, $color in $social-colors {
+          &--#{$social-network} {
+            background-color: $color;
+          }
+        }
+
+        @include respond-up-to(medium) {
+          display: table-cell;
+          font-size: 35px;
+          height: $social-icons-post-fixed-size;
+          vertical-align: middle;
+          width: 25%;
+        }
+
+        @include respond-to(medium) {
+          line-height: $social-icons-round-size;
+          border-radius: 50%;
+        }
+
+        &--email {
+          @include respond-up-to(medium) {
+            font-size: 22px;
+          }
+        }
+      }
+
+      &__link {
+        display: block;
+
+        @include respond-up-to(medium) {
+          line-height: 1;
+        }
+      }
+    }
+
+    > :not(:last-child) {
+      @include respond-to(medium) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+/**
+ * Adds margin at bottom to account for
+ **/
+.has-fixed-social-post {
+  @include respond-up-to(medium) {
+    margin-bottom: $social-icons-post-fixed-size;
+  }
+}

@@ -1,0 +1,34 @@
+.icon-slick-arrow-prev:before {
+  content: "\e900";
+}
+.icon-slick-arrow-next:before {
+  content: "\e901";
+}
+.slick-prev, .slick-next {
+  font-size: 23px;
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  color: transparent;
+  top: 40%;
+  display: block;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.slick-next {
+	right:0;
+}
+.slick-prev {
+	left:0;
+}
+.slick-prev:before {
+	content: "\e900";
+	color: $lightblue;
+}
+.slick-next:before {
+	content: "\e901";
+	color: $lightblue;
+}

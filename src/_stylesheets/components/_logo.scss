@@ -1,0 +1,34 @@
+$logo-navbar-height: 50px;
+
+.logo {
+  display: inline-block;
+
+  &__image {
+    height: $logo-navbar-height;
+    vertical-align: middle;
+    width: auto;
+  }
+
+  &__arrow-container {
+    @include unstyled-button;
+
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  &--navbar {
+    .logo__arrow-container:after {
+      content: " ";
+      display: inline-block;
+      margin-left: 5px;
+      vertical-align: middle;
+    }
+
+
+    &.has-expanded {
+      .logo__image-container:after {
+        border: none;
+      }
+    }
+  }
+}

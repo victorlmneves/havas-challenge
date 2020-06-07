@@ -1,0 +1,78 @@
+.didactic {
+  margin-bottom: 25px;
+
+  @include respond-to(laptop) {
+    margin-bottom: 100px;
+  }
+
+  &__inner {
+    margin: 0 auto;
+    padding: 0 10px;
+
+    @include clearfix();
+
+    @include respond-to(laptop) {
+      max-width: 1326px;
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+  }
+
+  &__list {
+
+    @include respond-to(tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include unordered-list();
+  }
+
+  &__item {
+    margin-bottom: 25px;
+    position: relative;
+
+    @include respond-to(tablet) {
+      flex-shrink: 3;
+      padding: 0 15px;
+    }
+  }
+
+  &__title {
+    color: $white;;
+    font-family: $font-glypha;
+    font-weight: $font-weight-bold;
+    font-size: 1.5rem;
+    left: 50%;
+    line-height: 1.1;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+
+    @include respond-to(mobile) {
+      font-size: 3vw;
+    }
+
+    @include respond-to(tablet) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__subtitle {
+    display: block;
+    font-family: $font-family-sans-serif;
+    margin-bottom: 20px;
+
+    @include respond-to(mobile) {
+      font-size: 2.6vw;
+    }
+
+    @include respond-to(tablet) {
+      font-size: 1.8rem;
+    }
+  }
+}

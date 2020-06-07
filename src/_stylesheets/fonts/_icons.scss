@@ -1,0 +1,22 @@
+/** Icons **/
+@font-face {
+  font-family: "valvoline-icons";
+  src:  url("#{$icomoon-font-path}/valvoline-icons.eot?5ysyho");
+  src:  url("#{$icomoon-font-path}/valvoline-icons.eot?5ysyho#iefix") format("embedded-opentype"),
+    url("#{$icomoon-font-path}/valvoline-icons.ttf?5ysyho") format("truetype"),
+    url("#{$icomoon-font-path}/valvoline-icons.woff?5ysyho") format("woff"),
+    url("#{$icomoon-font-path}/valvoline-icons.svg?5ysyho#valvoline-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+//FONT ICONS ICOMOON
+@font-face {
+  font-family: 'valvoline';
+  src:
+    url('../fonts/valvoline.ttf?9x0u92') format('truetype'),
+    url('../fonts/valvoline.woff?9x0u92') format('woff'),
+    url('../fonts/valvoline.svg?9x0u92#valvoline') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

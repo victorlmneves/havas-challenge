@@ -1,0 +1,44 @@
+$icons: (
+  'chevron-down' : $icon-chevron-down,
+  'chevron-up' : $icon-chevron-up,
+  'chevron-right' : $icon-chevron-right,
+  'chevron-left' : $icon-chevron-left,
+  'energy-policy' : $icon-energy-policy,
+  'sustainability' : $icon-sustainability,
+  'technology' : $icon-technology,
+  'search' : $icon-search,
+  'email' : $icon-email,
+  'twitter' : $icon-twitter,
+  'bars' : $icon-bars,
+  'google-plus' : $icon-google-plus,
+  'linkedin' : $icon-linkedin,
+  'youtube' : $icon-youtube,
+  'instagram' : $icon-instagram,
+  'vimeo' : $icon-vimeo,
+  'facebook' : $icon-facebook,
+  'feed' : $icon-feed,
+  'like' : $icon-like,
+  'retweet' : $icon-retweet
+);
+
+.icon {
+  @include icon-default-style;
+
+  @each $icon-name, $icon-content in $icons {
+    &--#{$icon-name} {
+      &:before {
+        content: $icon-content;
+      }
+
+      &__rounded {
+        border: 1px solid $white;
+        border-radius: 50%;
+        font-size: 12px;
+        margin-right: 5px;
+        padding: 5px;
+        position: relative;
+        top: -2px;
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+@mixin title-style {
+  line-height: 1.1;
+}
+
+@mixin all-child-headings {
+  @for $i from 1 through 6 {
+    & > h#{$i} {
+      @content;
+    }
+  }
+}
+
+@mixin content-link-text {
+  a {
+    font-weight: $font-weight-semibold;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+//HEADER TAGS
+h1 {
+	font-size: 24px;
+	font-weight: 600;
+	color: $blue;
+	margin-bottom: 20px;
+}
+h2 {
+	font-size: 22px;
+	font-weight: 600;
+	color: $darkgray;
+	margin-bottom: 20px;
+
+}
+h3 {
+	font-size: 20px;
+	font-weight: 600;
+	color: $gray;
+	margin-bottom: 20px;
+
+}
+h4 {
+	font-size: 18px;
+	font-weight: 400;
+	color: $blue;
+	margin-bottom: 15px
+}
+h5 {
+	font-size: 14px;
+	font-weight: 700;
+	color: $blue;
+	margin-bottom: 10px
+}
+h6 {}
+//PARAGRAPH
+p {
+	font-weight: 400;
+	color: $gray;
+}
+//LINKS
+a {
+	font-size: 16px;
+	font-weight: 400;
+	color: $lightblue;
+	text-decoration: none;
+	cursor: pointer;
+	&:hover{
+		color: $ahover;
+	}
+}
+//LISTS
+ul.feature-list {
+  margin-left: 20px;
+  li {
+    list-style-type: disc;
+    color: $gray;
+  }
+  &.no-bullets {
+    margin-left: 0;
+    li {
+      list-style-type: none;
+    }
+  }
+}
+
+
+//Placeholder
+*::-webkit-input-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: #e4e4e4;
+}
+
+*:-moz-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: #e4e4e4;
+}
+
+*:-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: #e4e4e4;
+}
+
+//
+input[type="text"], input[type="search"], textarea {
+  padding-left: 12px;
+  -webkit-appearance: none;
+}
+input:focus, textarea:focus {
+  outline: none;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'valvoline' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

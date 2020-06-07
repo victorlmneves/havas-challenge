@@ -1,0 +1,46 @@
+@mixin navigation-bar-form($input-group, $label, $input) {
+  background-color: $navigation-bar-expanded-form-color;
+  bottom: 0;
+  color: $white;
+  font-weight: $font-weight-light;
+  left: 0;
+  line-height: 1;
+  padding-bottom: 0;
+  padding-left: $navigation-bar-padding-left;
+  padding-right: $navigation-bar-padding-right;
+  padding-top: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-height: 0;
+  overflow: hidden;
+
+  &.is-expanded {
+    max-height: $navigation-bar-bottom-height;
+    padding-bottom: $navigation-bar-form-padding-vertical;
+    padding-top: $navigation-bar-form-padding-vertical;
+  }
+
+  #{$input-group} {
+    border-bottom: 1px solid $white;
+    display: table;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+
+  #{$label} {
+    border-right: 3px solid $white;
+    display: table-cell;
+    padding-right: $navigation-bar-form-input-spacer;
+    width: 1px;
+    white-space: nowrap;
+  }
+
+  #{$input} {
+    background-color: transparent;
+    color: $white;
+    display: table-cell;
+    padding-left: $navigation-bar-form-input-spacer;
+    width: 100%;
+  }
+}

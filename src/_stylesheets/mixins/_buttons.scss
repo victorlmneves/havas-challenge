@@ -1,0 +1,20 @@
+@mixin unstyled-button  {
+  border: 0;
+  padding: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+@mixin button($color, $font-color, $font-size, $font-weight, $padding, $transform, $hover-color) {
+		background-color: $color;
+		color: $font-color;
+		font-size: $font-size;
+		font-weight: $font-weight;
+		padding:$padding;
+		text-transform: $transform;
+		border: 0;
+
+			&:hover {
+				background-color: $hover-color;
+			}
+}
